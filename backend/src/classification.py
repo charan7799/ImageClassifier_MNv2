@@ -11,7 +11,7 @@ sys.path.insert(0, r'S:\ds_portfolio_proj\clf_imageNet_mnV2\backend')
 # from preprocess import *
 # from get_inferences import * 
 # from get_inferences import *
-from processing import preprocess_image, get_inference
+from processing.preprocess import preprocess_image, get_inference
 
 def get_classification(input_image, inference_file):
     # show_image(image_file)
