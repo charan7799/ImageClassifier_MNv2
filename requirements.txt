@@ -5,4 +5,5 @@ streamlit==1.13.0
 streamlit_image_comparison==0.0.2
 torch==1.12.1
 torchvision==0.13.1
-numpy opencv-python-headless
+numpy 
+opencv-python-headless
