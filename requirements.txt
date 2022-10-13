@@ -1,3 +1,5 @@
+numpy 
+opencv-python-headless
 matplotlib==3.6.0
 Pillow==9.2.0
 pillow_avif_plugin==1.2.2
@@ -5,5 +7,3 @@ streamlit==1.13.0
 streamlit_image_comparison==0.0.2
 torch==1.12.1
 torchvision==0.13.1
-numpy 
-opencv-python-headless
