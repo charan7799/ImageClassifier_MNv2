@@ -4,10 +4,10 @@ from PIL import ImageDraw
 from PIL import ImageFont
 
 if __name__ == '__main__':
-    input_image = Image.open(r"S:\ds_portfolio_proj\clf_imageNet_mnV2\backend\data\Images\dog.jpg")
+    input_image = Image.open(r"..\..\backend\data\Images\dog.jpg")
     # input_image.show()
     predictions =  get_classification(input_image,
-                            r"S:\ds_portfolio_proj\clf_imageNet_mnV2\backend\data\ImageNET_classes.txt")
+                            r"..\..\backend\data\ImageNET_classes.txt")
     # print(predictions)
     img_pred = ImageDraw.Draw(input_image)
     myFont = ImageFont.truetype('arial.ttf',40)
@@ -18,4 +18,4 @@ if __name__ == '__main__':
     input_image.show()
     
     # Save the edited image
-    input_image.save(r"S:\ds_portfolio_proj\clf_imageNet_mnV2\backend\data\Predictions\dog_pred.jpg")
+    input_image.save(r"..\..\backend\data\Predictions\dog_pred.jpg")
