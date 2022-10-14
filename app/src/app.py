@@ -3,13 +3,16 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 from io import BytesIO
+import os
 import pillow_avif # plugin for avif files
 import streamlit as st
 from streamlit_image_comparison import image_comparison
 # getting the processing modules by adding the path of the folder to sys
-sys.path.insert(0, r'../../backend/src')
+# sys.path.insert(0, r'../../backend/src')
 
-import classification as b
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
+import backend.src.classification as b
 
 
 
