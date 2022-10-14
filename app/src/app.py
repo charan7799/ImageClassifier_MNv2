@@ -34,7 +34,7 @@ def main():
         input_image = Image.open(up_file)
         pred_img = input_image.copy()
         predictions =  b.get_classification(input_image,
-                            r"S:\ds_portfolio_proj\clf_imageNet_mnV2\backend\data\ImageNET_classes.txt")
+                            r"backend\data\ImageNET_classes.txt")
         st.write("## Predictions?, scroll to the right")
         img_pred = ImageDraw.Draw(pred_img)
         myFont = ImageFont.truetype('arial.ttf',40)
