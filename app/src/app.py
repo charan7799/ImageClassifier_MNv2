@@ -3,13 +3,16 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 from io import BytesIO
+import os
 import pillow_avif # plugin for avif files
 import streamlit as st
 from streamlit_image_comparison import image_comparison
 # getting the processing modules by adding the path of the folder to sys
-sys.path.insert(0, r'../..')
+# sys.path.insert(0, r'../../backend/src')
 
-from backend.src.classification import get_classification
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+import backend.src.classification as b
 
 
 
@@ -30,8 +33,8 @@ def main():
     if up_file is not None: ## to validate the file existence
         input_image = Image.open(up_file)
         pred_img = input_image.copy()
-        predictions =  get_classification(input_image,
-                            r"S:\ds_portfolio_proj\clf_imageNet_mnV2\backend\data\ImageNET_classes.txt")
+        predictions =  b.get_classification(input_image,
+                            r"imageclassifier_mnv2\backend\data\ImageNET_classes.txt")
         st.write("## Predictions?, scroll to the right")
         img_pred = ImageDraw.Draw(pred_img)
         myFont = ImageFont.truetype('arial.ttf',40)
