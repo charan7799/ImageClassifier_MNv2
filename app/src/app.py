@@ -10,7 +10,7 @@ from streamlit_image_comparison import image_comparison
 # getting the processing modules by adding the path of the folder to sys
 # sys.path.insert(0, r'../../backend/src')
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 import backend.src.classification as b
 
@@ -34,7 +34,7 @@ def main():
         input_image = Image.open(up_file)
         pred_img = input_image.copy()
         predictions =  b.get_classification(input_image,
-                            r"imageclassifier_mnv2\backend\data\ImageNET_classes.txt")
+                            r"..\..\backend\data\ImageNET_classes.txt")
         st.write("## Predictions?, scroll to the right")
         img_pred = ImageDraw.Draw(pred_img)
         myFont = ImageFont.truetype('arial.ttf',40)
