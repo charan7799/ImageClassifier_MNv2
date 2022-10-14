@@ -7,9 +7,9 @@ import pillow_avif # plugin for avif files
 import streamlit as st
 from streamlit_image_comparison import image_comparison
 # getting the processing modules by adding the path of the folder to sys
-sys.path.insert(0, r'../../backend')
+sys.path.insert(0, r'../../backend/src')
 
-import src.classification as b
+import classification as b
 
 
 
