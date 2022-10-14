@@ -9,7 +9,7 @@ from streamlit_image_comparison import image_comparison
 # getting the processing modules by adding the path of the folder to sys
 sys.path.insert(0, r'../..')
 
-from backend.src.classification import get_classification
+import backend.src.classification.*
 
 
 
