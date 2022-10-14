@@ -7,4 +7,4 @@ streamlit==1.13.0
 streamlit_image_comparison==0.0.2
 torch==1.12.1
 torchvision==0.13.1
-backend
+gunicorn==20.1.0
