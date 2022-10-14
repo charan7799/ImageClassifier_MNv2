@@ -10,7 +10,7 @@ from streamlit_image_comparison import image_comparison
 # getting the processing modules by adding the path of the folder to sys
 # sys.path.insert(0, r'../../backend/src')
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import backend.src.classification as b
 
