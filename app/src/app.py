@@ -9,7 +9,7 @@ from streamlit_image_comparison import image_comparison
 # getting the processing modules by adding the path of the folder to sys
 sys.path.insert(0, r'../..')
 
-import backend.src.classification.*
+import backend.src.classification as b
 
 
 
@@ -30,7 +30,7 @@ def main():
     if up_file is not None: ## to validate the file existence
         input_image = Image.open(up_file)
         pred_img = input_image.copy()
-        predictions =  get_classification(input_image,
+        predictions =  b.get_classification(input_image,
                             r"S:\ds_portfolio_proj\clf_imageNet_mnV2\backend\data\ImageNET_classes.txt")
         st.write("## Predictions?, scroll to the right")
         img_pred = ImageDraw.Draw(pred_img)
