@@ -12,7 +12,7 @@ from streamlit_image_comparison import image_comparison
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-import backend.src.classification as b
+import clf_imageNet_mnV2.backend.src.classification as b
 
 
 
