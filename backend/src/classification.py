@@ -2,11 +2,12 @@
 import torch
 from torch.nn import functional as F
 import sys
-
+import os
 
  
 # getting the processing modules by adding the path of the folder to sys
-sys.path.insert(0, r'..\..\backend')
+# sys.path.insert(0, r'..\..\backend')
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # from preprocess import *
 # from get_inferences import * 
